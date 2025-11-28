@@ -693,9 +693,11 @@ body {
         }
     }
 
+    /* When mobile sidebar is opened, push menu items down */
+    @media (max-width: 700px) {
+        .sidebar.open .sidebar-inner {
+            padding-top: 100px; /* shift chapters ~6-7 lines down */
+        }
+    }
 
 }
-
-
-
-
