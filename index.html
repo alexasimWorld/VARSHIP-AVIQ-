@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>VARSHIP SHIPPING CO. LTD // Vetting Inspection Questionnaire (AVIQ)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Fullscreen Image Modal (correctly placed inside <body>) -->
+    <div id="imageModal" class="image-modal">
+        <span id="imageModalClose" class="image-modal-close">×</span>
+        <img id="imageModalImg" class="image-modal-content">
+    </div>
+
+    <header class="top-bar">
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <div class="top-bar-title">
+            <div class="app-name">VARSHIP SHIPPING CO. LTD // Vetting Inspection Questionnaire (AVIQ)</div>
+            <div class="vessel-name" id="vesselName">
+                Vessel: <span>M/V SCIO SPIRIT - 9502738</span>
+            </div>
+        </div>
+        <div class="top-bar-actions">
+            <button id="saveDataBtn" class="btn btn-secondary small">Save As…</button>
+
+            <button id="loadDataBtn" class="btn btn-secondary small">Load File…</button>
+
+            <button id="clearDataBtn" class="btn btn-secondary small">Clear Local Data</button>
+
+            <input type="file" id="loadFileInput" accept="application/json" style="display:none;">
+
+        </div>
+
+
+        <div id="autosaveStatus" class="autosave-status">Saved ✓</div>
+
+
+    </header>
+
+    <div class="app-shell">
+        <!-- Left pane: chapters -->
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-inner">
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Chapters</h2>
+                    <ul id="chaptersList" class="chapter-list">
+                        <!-- Filled by app.js from DATA_TEMPLATE -->
+                    </ul>
+                </div>
+
+                <div class="sidebar-section sidebar-section-extra">
+                    <h2 class="sidebar-title">Other Sections</h2>
+                    <ul class="chapter-list">
+                        <li id="navAdditionalItems" class="chapter-item">Additional Items</li>
+                        <li id="navObservations" class="chapter-item">Observations</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Right pane: questions -->
+        <main id="mainContent" class="main-content">
+            <div id="chapterHeader" class="chapter-header">
+                <h1>Select a chapter</h1>
+                <p>Use the list on the left to choose a chapter.</p>
+            </div>
+            <div id="questionsContainer" class="questions-container">
+                <!-- Questions are rendered here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Data + logic -->
+    <script src="data_template.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
